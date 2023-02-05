@@ -27,8 +27,9 @@ public class Main {
 					System.out.println("게시글이 없습니다.");
 				} else if (titleList.size() > 0) {
 					System.out.printf("총 %d개의 게시물이 있습니다.\n", titleList.size());
+					System.out.println("번호 |제목\t\t\t|조회수");
 					for (int i = 0; i < titleList.size(); i++) {
-						System.out.printf("%d. %s | View : %d\n", i + 1, titleList.get(i), viewList.get(i));
+						System.out.printf(" %d  |%s\t\t|%d\n", i + 1, titleList.get(i), viewList.get(i));
 					}
 				}
 			}
@@ -154,8 +155,8 @@ public class Main {
 						System.out.printf("제목 : %s -> ", titleList.get(Num - 1));
 						String reTitle = In.nextLine().trim();
 						String pastTitle = titleList.get(Num - 1);
-						System.out.printf("%d번 게시물 수정을 취소합니다.\n", Num);
 						if (reTitle.equals("exit")) {
+							System.out.printf("%d번 게시물 수정을 취소합니다.\n", Num);
 							break;
 						}
 						if (reTitle.equals("") || reTitle.length() == 0) {
